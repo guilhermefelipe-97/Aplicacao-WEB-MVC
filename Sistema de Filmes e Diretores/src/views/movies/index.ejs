@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h2>Filmes</h2>
+<a href="/movies/new">Cadastrar novo filme</a>
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>ID</th>
+    <th>Título</th>
+    <th>Ano</th>
+    <th>Diretor</th>
+  </tr>
+  <% movies.forEach(movie => { %>
+    <tr>
+      <td><%= movie.id %></td>
+      <td><%= movie.title %></td>
+      <td><%= movie.year || '-' %></td>
+      <td><%= movie.director_name || '-' %></td>
+    </tr>
+  <% }) %>
+</table>
+<%- include('../partials/footer') %> 

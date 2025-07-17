@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<h2>Diretores</h2>
+<a href="/directors/new">Cadastrar novo diretor</a>
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+  </tr>
+  <% directors.forEach(director => { %>
+    <tr>
+      <td><%= director.id %></td>
+      <td><%= director.name %></td>
+    </tr>
+  <% }) %>
+</table>
+<%- include('../partials/footer') %> 

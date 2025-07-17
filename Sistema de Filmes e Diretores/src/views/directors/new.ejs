@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<h2>Cadastrar Novo Diretor</h2>
+<% if (typeof error !== 'undefined') { %>
+  <p style="color:red;"><%= error %></p>
+<% } %>
+<form method="POST" action="/directors/new">
+  <label>Nome: <input type="text" name="name" required></label><br>
+  <button type="submit">Cadastrar</button>
+</form>
+<a href="/directors">Voltar</a>
+<%- include('../partials/footer') %> 
